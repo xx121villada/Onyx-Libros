@@ -1,0 +1,27 @@
+GET http://localhost:3000/libros HTTP/1.1
+###
+GET http://localhost:3000/libros/1727973455814 HTTP/1.1
+###
+POST http://localhost:3000/crear HTTP/1.1
+Content-Type: application/json 
+
+{
+    "titulo": "Libro creado",
+    "autor": "Autor creado",
+    "anio": "2025",
+    "genero": "No Ficción"
+}
+
+###
+
+PUT http://localhost:3000/actualizar/1727974995235  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "titulo": "Libro actualizado",
+    "autor": "dani",
+    "anio": "2025",
+    "genero": "Romance"
+}
+###
+DELETE  http://localhost:3000/eliminar/1727974995235 HTTP/1.1
